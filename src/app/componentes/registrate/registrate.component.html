@@ -1,0 +1,44 @@
+<div class="contenedorRegistro" >
+	
+	<form #formRegistro="ngForm" (ngSubmit)="onSubmit()">
+		<!-- titulo -->
+		<h2 class="tituloRegistrate">Registrate aqui</h2>
+
+		<!-- campo nombre --> 
+		<span *ngIf="nameRegistro.touched && !nameRegistro.valid" class="alert">sin nombre no entras</span>
+		<input type="text" name="name" placeholder="aqui va tu nombre completo" #nameRegistro="ngModel" [(ngModel)]="Data.name" required minlength="8" maxlength="50" />	
+
+		<!-- campo email -->
+		<span *ngIf="emailRegistro.touched && !emailRegistro.valid" class="alert">sin email no entras tampoco</span>
+		<input type="email" name="email" placeholder="aqui va tu email" #emailRegistro="ngModel" [(ngModel)]="Data.email" required minlength="9" maxlength="40" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+
+		<!-- campo nick -->
+		<span *ngIf="nickNameRegistro.touched && !nickNameRegistro.valid" class="alert">no sabes leer?</span>
+		<input type="text" name="nickName" placeholder="nombre de usuario" #nickNameRegistro="ngModel" [(ngModel)]="Data.nickName" required minlength="5" maxlength="30"  />
+
+		<!-- campo edad-->
+		<span *ngIf="ageRegistro.touched && !ageRegistro.valid" class="alert"> i soo sorry :(</span>
+		<input type="number" name="age" placeholder="tu edad" #ageRegistro="ngModel" [(ngModel)]="Data.age" min="18" max="118" pattern="[0-9]{1,3}" required/>
+
+		<!-- campo contraseña-->
+		<span *ngIf="passwordRegistro.touched && !passwordRegistro.valid" class="alert">la contraseña debe tener al menos una letre minuscula, una mayuscula y un numero</span>
+		<input type="password" name="password" placeholder="pon tu contraseña" #passwordRegistro="ngModel" [(ngModel)]="Data.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
+
+		<!-- campo confirmacion contrasena -->
+		<span *ngIf="passwordValidationRegistro.touched && !passwordValidationRegistro.valid || Data.password != Data.passwordValidation" class="alert">debe ser igual a la contraseña</span>
+		<input type="password" name="passwordValidation" placeholder="confirma tu contraseña" #passwordValidationRegistro="ngModel" [(ngModel)]="Data.passwordValidation" required />
+
+		
+		<!-- campo eleccion team -->
+		<span *ngIf="!team.valid" class="alert">por favor ponga su genero coso, cosa o queso que sea</span>
+		
+		<label>escoge por favor el equipo que desees</label>
+		<input type="radio" required #team="ngModel" name="team" value="Florente" [(ngModel)]='Data.team'><span class="options" id="optionFlorente">&#402;</span>
+		<input type="radio" required #team="ngModel" name="team" value="Yggdra" [(ngModel)]='Data.team'><span class="options" id="optionYggdra">&#376;</span>
+		<input type="radio" required #team="ngModel" name="team" value="Servantes" [(ngModel)]='Data.team'><span class="options" id="optionServantes">&#352;</span>
+
+		<input type="submit" name="enviar" [disabled]="!formRegistro.form.valid"/>
+		
+	</form>
+
+</div>

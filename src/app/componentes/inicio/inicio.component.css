@@ -1,0 +1,49 @@
+.Inicio{
+	position: relative;
+}
+
+h4{
+	font-size: 1.3em;
+}
+h5{
+	font-size: 1.2em;
+}
+
+.Titulo{
+	position: relative;
+	width: 70%;
+	margin: 0px auto;
+	text-align: center;
+	margin-bottom: 200px;
+	top: 70px;
+}
+
+.Titulo h2{
+	font-size: 50px;
+	border-bottom: 1px solid #ccc;
+}
+.Titulo h4{
+	font-size: 22px;
+	color: gray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+article{
+	width: 70%;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	font-size: 17px;
+	letter-spacing: 2px;
+	white-space: 2px;
+}
+article h5{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+article p{
+	padding-top: 20px;
+	padding-bottom: 30px;
+	text-align: justify;
+}

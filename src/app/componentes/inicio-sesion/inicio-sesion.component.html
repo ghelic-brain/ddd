@@ -1,0 +1,11 @@
+<div class="contenedorInicioSesion">
+	<form #formIngreso="ngForm" (ngSubmit)="onSubmit()">
+		<h2>ingrese sus datos "socio"</h2>	
+		<span *ngIf="emailIngreso.touched && !emailIngreso.valid"> datos completos</span>
+		<input type="text" name="email" placeholder="Tu Email" #emailIngreso="ngModel" [(ngModel)]="Data.email">
+		<input type="password" name="password" placeholder="contraseña" #contrasenaIngreso="ngModel" [(ngModel)]="Data.password">
+		<input type="submit" name="enviar" placeholder="enviar" [disabled]="!formIngreso.form.valid">
+		
+		<span [routerLink]="['/registrate']">no te has registrado?</span>
+	</form>
+</div>

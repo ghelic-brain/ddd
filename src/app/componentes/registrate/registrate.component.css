@@ -1,0 +1,126 @@
+.contenedorRegistro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: all;
+	width: 100%;
+	user-select: none;
+}
+form{
+	width: 100%;
+	background-color: #191919;
+	text-align: center;
+	height: 70%;
+	position: relative;
+	transition: 1s;
+}
+form h2{
+	margin-bottom: 20px;
+	margin-top: 20px;
+	color: whitesmoke;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+form span.alert{
+	font-size: .9em;
+	color: #DDDDDD;
+	padding: 10px;
+	width: 40%;
+	display: block;
+	margin: 10px auto;
+	border-bottom: 2px solid red;
+}
+input[type='text'],input[type='number'],input[type='password'],input[type='email']{
+	
+	border: 0;
+	background:none;
+	display: inline-block;
+	margin: 10px 10px;
+	text-align: center;
+	border:2px solid #3498db;
+	padding: 14px 10px;
+	width: 60%;
+	outline: none;
+	color: whitesmoke;
+	border-radius: 20px;
+	transition: 0.25s;
+}
+input[type='text']:focus,input[type='number']:focus,input[type='password']:focus,input[type='email']:focus{
+	width: 75%;
+	border-color:#2ecc71;
+}
+input[type='text']:invalid,input[type='number']:invalid,input[type='password']:invalid,input[type='email']:invalid{
+	width: 75%;
+	border-color:tomato;
+}
+input[type="radio"]{
+	margin: 30px 10px;
+}
+label{
+	display: block;	
+	color: whitesmoke;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+.options{
+	color: #111111;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	font-size: 1.4em;
+	background-color:#DDDDDD; 
+	box-shadow: 0 0 4px #333;
+}
+#optionFlorente{
+	transition: all ease .5s;
+}
+#optionFlorente:hover{
+	background-color: #499b4a;
+	box-shadow: 0 0 5px #3a7c3b;
+}
+#optionYggdra{
+
+}
+#optionYggdra:hover{
+
+}
+#optionServantes{
+
+}
+#optionServantes:hover{
+
+}
+
+ form input[type = "submit"]{
+	border: 0;
+	background:none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border:2px solid #2ecc71;
+	padding: 14px 40px;
+	width: 200px;
+	outline: none;
+	color: whitesmoke;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+form input[type = "submit"]:focus{
+	background-color: #2ecc71;
+}
+
+/*opcionales*/
+
+form input[disabled]{
+	background-color: red;
+	border-color: tomato;
+}
+
+/*.submitCerrado{
+	background-color: blue;
+	transform: scale(1.5);
+	color: red;
+}*/

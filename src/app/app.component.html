@@ -1,0 +1,21 @@
+<header>
+
+	<span routerLink="inicio" [routerLinkActive]="['actived']" class="botonMenu">inicio</span>
+
+	<span routerLink="foro" [routerLinkActive]="['actived']" class="botonMenu">foro</span>
+
+	<div class="logo" routerLink="inicioSesion" ><figure><img src="../assets/fondos/logo.jpg"></figure></div>
+
+	<span routerLink="lineas" [routerLinkActive]="['actived']" class="botonMenu">lineas</span>
+	
+	<span routerLink="contacto" [routerLinkActive]="['actived']" class="botonMenu">contact</span>
+	
+</header>
+
+<section id="contenido">
+	<router-outlet></router-outlet>
+</section>
+
+<footer>
+	Derechos de autor y privacidad reservados &copy;
+</footer>
