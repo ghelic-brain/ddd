@@ -12,4 +12,8 @@ export class ForoComponent implements OnInit {
   ngOnInit() {
   }
 
+  openForo(e){
+  	console.log(e);
+  }
+
 }

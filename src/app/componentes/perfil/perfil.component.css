@@ -1,0 +1,92 @@
+.container{
+	position: relative;
+	background-color: #ffffff;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 500px;
+}
+/*boton salir*/
+#salir{
+	position: absolute;
+	top: 30px;
+	left: 2%;
+	display: block;
+	background-color:#499b4a;
+	padding: 6px;
+	border-radius: 10px;
+	transition: all ease-in.5s ;
+	cursor: pointer;
+}
+#salir:hover{
+	text-shadow: 0 0 4px #499b4a;
+	transform: scale(1.2);
+	background-color:transparent;
+}
+/*!-------¡*/
+
+/*containers*/
+.contenido{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.datos{
+	background-color: #111111;
+	margin: 4px;	
+	padding: 6px;
+	border-radius: 6px;
+}
+.datos span{
+	color: gold;
+}
+.datos span:first-child{
+	margin-right: 6px;
+	color: #AAAAAA;
+}
+/*!--------¡*/
+
+/*perfil*/
+	/*conteiner perfil*/
+	.perfil{
+		width: 60%;
+		background-color: #141d12;
+		border-radius: 10px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+		/*foto de perfil*/
+			.Avatar{
+				width: 110px;
+				height: 110px;
+				border-radius: 15px;
+				background-color: red;
+				margin:10px; 
+			}
+		/*!----------¡*/
+		/*info de perfil*/
+			.datosPrincipales{
+				width: 80%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: initial;
+				border-radius: 10px;
+			}
+			.datosPrincipales.contenido{
+				background-color:#89bc84;
+				padding: 10px;
+			}
+		/*!------------¡*/
+	/*!-------¡*/
+		
+/*!--------¡*/
+/*datos*/
+	/*datosConteiner*/
+		.datosSecundarios{
+			
+		}
+	/*!--------¡*/
+/*!---¡*/

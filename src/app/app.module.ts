@@ -12,6 +12,15 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { ErrorComponent } from './componentes/error/error.component';
 import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion.component';
 import { RegistrateComponent } from './componentes/registrate/registrate.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
+
+import { UserService } from './servicios/user.service';
+
+//guards
+import { PrivateGuard } from './guards/private.guard';
+import { UnregistredGuard } from './guards/unregistred.guard';
+import { AdminGuard } from './guards/admin.guard';
+
 
 
 @NgModule({
@@ -23,7 +32,8 @@ import { RegistrateComponent } from './componentes/registrate/registrate.compone
     ContactoComponent,
     ErrorComponent,
     InicioSesionComponent,
-    RegistrateComponent
+    RegistrateComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +42,11 @@ import { RegistrateComponent } from './componentes/registrate/registrate.compone
     HttpClientModule
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    PrivateGuard,
+    UnregistredGuard,
+    AdminGuard,    
+    UserService
   ],
   bootstrap: [AppComponent]
 })

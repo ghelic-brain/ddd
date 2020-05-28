@@ -1,9 +1,34 @@
-
-.controlForo{
+.container{
+	width: 100%;
+	min-height: 500px;
+	background: linear-gradient(top,#499b4a,#9040a4);
 	display: flex;
-	
-	padding: 10px;
-	background-color:red; 
-	min-height: 120px;
-	margin:20px auto;
+	justify-content: center;
+	align-items: center;
 }
+/*hud inicio*/
+.foros{
+	background-color: #e1eedf;
+	min-height: 300px;
+	padding: 10px;
+	max-width: 60%;
+}
+
+
+/*---------*/
+/*textos*/
+.subtitulo{
+	font-family: 'sovietic program';
+	font-size: 1.1em;
+	text-align: center;
+	margin: 20px;
+}
+.seccionForo{
+	display: inline-block;
+	padding: 4px;
+	background-color: #727272;
+	margin: 6px 4px;
+	font-size: .7em;
+	cursor: pointer;
+}
+/*----------*/
